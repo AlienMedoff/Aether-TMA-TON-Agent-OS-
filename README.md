@@ -1,14 +1,66 @@
-# 🌌 Aether-TMA-TON-Agent-OS
+# 🌌 Aether-TMA: Secure Infrastructure for AI Agents on TON
 
-**Universal Agentic Runtime & Orchestration Layer for Telegram Mini Apps**
 
-Gives any LLM agent (Claude, GPT, Grok, Llama) real **eyes and hands** inside Telegram WebView — and a **verified, auditable on-chain execution layer** on TON.
+​Status: ⚠️ Early MVP / Prototype
 
-The agent doesn't just write text. It **sees** the interface, **understands** it, **controls** it in real time — and executes financial operations through cryptographically secure smart contracts.
+
+This project is an open-source research and development prototype. It is currently under active development. Do not use with mainnet funds. We are building the security infrastructure layer for autonomous agents, not a "trading bot." The code is open for review, audit, and community contribution.
+
+
+
+
+
+
+​The Problem: AI Agents are "Black Boxes"
+
+
+​Current AI agents can execute transactions, but they are inherently unsafe. If an LLM is compromised or hallucinates, it can drain a wallet. There is no existing standard to limit what an AI can actually do on the blockchain.
+
+
+​The Solution: "The Seatbelt for Agents"
+
+
+​Aether-TMA is not an agent itself; it is a secure runtime and execution framework. We provide the "Seatbelt":
+
+
+
+
+​On-Chain Policy Engine: Using AetherVault smart contracts, the AI's power is constrained by code. Even if an AI agent is 100% compromised, it cannot bypass the Vault rules (daily limits, whitelist, guardian approval).
+
+
+​Decoupled Architecture: We separate the AI's decision-making (Python runtime) from the Transaction Execution (TVM/Tact contracts).
+
+
+​Deterministic Controller: The AI acts as a user interface driver, while the financial logic remains strictly deterministic and permissioned via the smart contract governance.
+
+
+
+
+​We are building the missing "Secure Execution Layer" for Web3 Agents.
+
+
+​Why this exists?
+
+
+​We see a clear demand from top TON builders for a standard way to interface LLMs with Web3 wallets safely. We invite the community to review, audit, and contribute to this architecture. If you are an engineer concerned about the lack of governance in AI-driven DeFi, this project is for you.
+
+
 
 ---
 
 ## Architecture Overview
+
+
+
+
+
+Security Philosophy: We assume that LLMs are insecure by design. Therefore, all financial logic exists outside the agent's reach. The agent is a "guest" in the Aether-TMA runtime, with permissions restricted by the AetherVault smart contract. We don't trust the AI; we verify the intent.
+
+
+
+
+
+
 
 ```
 ┌─────────────────────────────────────────────────────────┐
